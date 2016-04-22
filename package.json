@@ -2,14 +2,15 @@
   "name": "line-parser",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec --check-leaks --bail test/",
+    "test-cov": "istanbul cover $(npm bin)/_mocha -- --reporter dot --check-leaks test/"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "kikuchy",
+  "license": "MIT",
   "devDependencies": {
     "clone": "^1.0.2",
+    "istanbul": "^0.4.3",
     "mocha": "^2.4.5"
   }
 }
